@@ -43,7 +43,7 @@ async def check_website():
             if prev_badge_data != curr_badge_data:
                 for i in range(len(curr_badge_data)):
                     if prev_badge_data[i] != curr_badge_data[i]:
-                        print(f"detect change in {semesters[i]}")
+                        print(f"Detected a change in {semesters[i]}")
                         channel_id = discord.utils.get(client.get_all_channels(), name='general')
                         await channel_id.send(f"Job listings for {semesters[i]} has changed from {prev_badge_data[i]} to {curr_badge_data[i]}")
                 prev_badge_data = curr_badge_data
